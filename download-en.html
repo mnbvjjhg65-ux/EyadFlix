@@ -192,10 +192,6 @@
             </ul>
         </div>
         
-        <button class="download-btn" style="background: #4CAF50;" onclick="viewGuide()">
-            📖 User Guide
-        </button>
-        
         <div class="version">
             <p>Created by: <span class="developer">Eyad AI Juhani</span></p>
             <p>All rights reserved © 2024</p>
@@ -204,15 +200,15 @@
     
     <script>
         function downloadAPK() {
-            // Replace with your actual GitHub release link or hosted APK URL
             const downloadURL = 'https://github.com/mnbvjjhg65-ux/EyadFlix/releases/download/v1.0.0/EyadFlix-v1.0.0.apk';
             
-            // Open in new window
-            window.open(downloadURL, '_blank');
-        }
-        
-        function viewGuide() {
-            alert('Check README.md or START_HERE.md in the project for complete documentation');
+            // Direct automatic download
+            const link = document.createElement('a');
+            link.href = downloadURL;
+            link.download = 'EyadFlix-v1.0.0.apk';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         }
     </script>
 </body>

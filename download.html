@@ -173,10 +173,6 @@
             </ul>
         </div>
         
-        <button class="download-btn" style="background: #4CAF50;" onclick="viewGuide()">
-            📖 دليل الاستخدام
-        </button>
-        
         <div class="version">
             <p>تم الإنشاء بواسطة: <span class="developer">Eyad AI Juhani</span></p>
             <p>جميع الحقوق محفوظة © 2024</p>
@@ -185,23 +181,15 @@
     
     <script>
         function downloadAPK() {
-            // استبدل الرابط برابط مشروعك الفعلي على GitHub أو موقعك
             const downloadURL = 'https://github.com/mnbvjjhg65-ux/EyadFlix/releases/download/v1.0.0/EyadFlix-v1.0.0.apk';
             
-            // فتح الرابط في نافذة جديدة
-            window.open(downloadURL, '_blank');
-            
-            // أو استخدم هذا لتحميل مباشر:
-            // const link = document.createElement('a');
-            // link.href = downloadURL;
-            // link.download = 'EyadFlix-v1.0.0.apk';
-            // document.body.appendChild(link);
-            // link.click();
-            // document.body.removeChild(link);
-        }
-        
-        function viewGuide() {
-            alert('سيتم فتح دليل الاستخدام...\n\nتحقق من README.md أو START_HERE.md في المشروع');
+            // تحميل تلقائي مباشر
+            const link = document.createElement('a');
+            link.href = downloadURL;
+            link.download = 'EyadFlix-v1.0.0.apk';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         }
     </script>
 </body>
