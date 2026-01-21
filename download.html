@@ -235,7 +235,7 @@
             ar: {
                 title: 'EyadFlix',
                 subtitle: 'تطبيق البث الحديث المدعوم بتقنية Stremio',
-                downloadBtn: '📥 تحميل APK الآن',
+                downloadBtn: '� كيفية الحصول على APK',
                 versionLabel: 'الإصدار:',
                 sizeLabel: 'حجم الملف:',
                 requiresLabel: 'متطلبات النظام:',
@@ -253,7 +253,7 @@
             en: {
                 title: 'EyadFlix',
                 subtitle: 'Modern Stremio-Powered Streaming Application',
-                downloadBtn: '📥 Download APK Now',
+                downloadBtn: '📚 How to Get APK',
                 versionLabel: 'Version:',
                 sizeLabel: 'File Size:',
                 requiresLabel: 'Requirements:',
@@ -312,15 +312,17 @@
         }
 
         function downloadAPK() {
-            const downloadURL = 'https://github.com/mnbvjjhg65-ux/EyadFlix/releases/download/v1.0.0/EyadFlix-v1.0.0.apk';
-            
-            // Direct automatic download
-            const link = document.createElement('a');
-            link.href = downloadURL;
-            link.download = 'EyadFlix-v1.0.0.apk';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
+            // رابط حقيقي سيتم تحديثه عند توفر APK فعلي
+            alert(getAlertMessage());
+        }
+
+        function getAlertMessage() {
+            const lang = document.documentElement.lang;
+            if (lang === 'ar') {
+                return 'طرق الحصول على APK:\n\n1️⃣ بناء محلي:\nاتبع تعليمات QUICKSTART.md\n\n2️⃣ عند توفر APK:\nسيتم تحميله على Releases\n\nشكراً لصبرك!';
+            } else {
+                return 'How to get APK:\n\n1️⃣ Build locally:\nFollow QUICKSTART.md instructions\n\n2️⃣ When APK is ready:\nWill be uploaded to Releases\n\nThank you for patience!';
+            }
         }
 
         // Initialize with Arabic
