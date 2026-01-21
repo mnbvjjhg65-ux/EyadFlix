@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تحميل EyadFlix</title>
+    <title>تحميل EyadFlix | Download EyadFlix</title>
     <style>
         * {
             margin: 0;
@@ -29,6 +29,35 @@
             width: 100%;
             padding: 40px;
             text-align: center;
+        }
+
+        .lang-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .lang-btn {
+            background: white;
+            border: 2px solid #667eea;
+            color: #667eea;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .lang-btn.active {
+            background: #667eea;
+            color: white;
+        }
+
+        .lang-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
         }
         
         .logo {
@@ -76,7 +105,6 @@
             border-radius: 15px;
             padding: 20px;
             margin: 30px 0;
-            text-align: right;
         }
         
         .info-item {
@@ -86,12 +114,8 @@
             color: #666;
         }
         
-        .info-label {
-            font-weight: bold;
-        }
-        
         .features {
-            text-align: right;
+            text-align: left;
             margin: 30px 0;
         }
         
@@ -107,16 +131,30 @@
         
         .feature-list li {
             margin: 10px 0;
-            padding-right: 25px;
+            padding-left: 25px;
             position: relative;
         }
         
         .feature-list li:before {
             content: "✓";
             position: absolute;
-            right: 0;
+            left: 0;
             color: #667eea;
             font-weight: bold;
+        }
+
+        .features.rtl {
+            text-align: right;
+        }
+
+        .features.rtl .feature-list li {
+            padding-left: 0;
+            padding-right: 25px;
+        }
+
+        .features.rtl .feature-list li:before {
+            left: auto;
+            right: 0;
         }
         
         .version {
@@ -132,58 +170,151 @@
             font-size: 14px;
             margin-top: 10px;
         }
+
+        .info.rtl {
+            text-align: right;
+        }
+
+        .info.rtl .info-item {
+            flex-direction: row-reverse;
+        }
     </style>
 </head>
 <body>
+    <div class="lang-switch">
+        <button class="lang-btn active" id="arBtn" onclick="setLanguage('ar')">العربية</button>
+        <button class="lang-btn" id="enBtn" onclick="setLanguage('en')">English</button>
+    </div>
+    
     <div class="container">
         <div class="logo">🎬</div>
         
-        <h1>EyadFlix</h1>
-        <p class="subtitle">تطبيق البث الحديث المدعوم بتقنية Stremio</p>
+        <h1 id="title">EyadFlix</h1>
+        <p class="subtitle" id="subtitle">تطبيق البث الحديث المدعوم بتقنية Stremio</p>
         
         <button class="download-btn" onclick="downloadAPK()">
-            📥 تحميل APK الآن
+            <span id="downloadBtn">📥 تحميل APK الآن</span>
         </button>
         
-        <div class="info">
+        <div class="info" id="infoBox">
             <div class="info-item">
-                <span>الإصدار:</span>
+                <span id="versionLabel">الإصدار:</span>
                 <span><strong>1.0.0</strong></span>
             </div>
             <div class="info-item">
-                <span>حجم الملف:</span>
+                <span id="sizeLabel">حجم الملف:</span>
                 <span><strong>~50 MB</strong></span>
             </div>
             <div class="info-item">
-                <span>متطلبات النظام:</span>
+                <span id="requiresLabel">متطلبات النظام:</span>
                 <span><strong>Android 5.0+</strong></span>
             </div>
         </div>
         
-        <div class="features">
-            <h3>المميزات الرئيسية</h3>
-            <ul class="feature-list">
-                <li>مشغل فيديو احترافي</li>
-                <li>دعم عربي كامل (RTL)</li>
-                <li>إدارة برامج Stremio</li>
-                <li>سجل مشاهدة وقائمة مفضلة</li>
-                <li>ترجمات متعددة اللغات</li>
-                <li>تخزين محلي آمن</li>
-                <li>تصميم حديث وسلس</li>
+        <div class="features" id="featuresBox">
+            <h3 id="featuresTitle">المميزات الرئيسية</h3>
+            <ul class="feature-list" id="featuresList">
+                <li id="feat1">مشغل فيديو احترافي</li>
+                <li id="feat2">دعم عربي كامل (RTL)</li>
+                <li id="feat3">إدارة برامج Stremio</li>
+                <li id="feat4">سجل مشاهدة وقائمة مفضلة</li>
+                <li id="feat5">ترجمات متعددة اللغات</li>
+                <li id="feat6">تخزين محلي آمن</li>
+                <li id="feat7">تصميم حديث وسلس</li>
             </ul>
         </div>
         
         <div class="version">
-            <p>تم الإنشاء بواسطة: <span class="developer">Eyad AI Juhani</span></p>
-            <p>جميع الحقوق محفوظة © 2024</p>
+            <p id="createdBy">تم الإنشاء بواسطة: <span class="developer">Eyad AI Juhani</span></p>
+            <p id="copyright">جميع الحقوق محفوظة © 2024</p>
         </div>
     </div>
     
     <script>
+        const translations = {
+            ar: {
+                title: 'EyadFlix',
+                subtitle: 'تطبيق البث الحديث المدعوم بتقنية Stremio',
+                downloadBtn: '📥 تحميل APK الآن',
+                versionLabel: 'الإصدار:',
+                sizeLabel: 'حجم الملف:',
+                requiresLabel: 'متطلبات النظام:',
+                featuresTitle: 'المميزات الرئيسية',
+                feat1: 'مشغل فيديو احترافي',
+                feat2: 'دعم عربي كامل (RTL)',
+                feat3: 'إدارة برامج Stremio',
+                feat4: 'سجل مشاهدة وقائمة مفضلة',
+                feat5: 'ترجمات متعددة اللغات',
+                feat6: 'تخزين محلي آمن',
+                feat7: 'تصميم حديث وسلس',
+                createdBy: 'تم الإنشاء بواسطة: ',
+                copyright: 'جميع الحقوق محفوظة © 2024'
+            },
+            en: {
+                title: 'EyadFlix',
+                subtitle: 'Modern Stremio-Powered Streaming Application',
+                downloadBtn: '📥 Download APK Now',
+                versionLabel: 'Version:',
+                sizeLabel: 'File Size:',
+                requiresLabel: 'Requirements:',
+                featuresTitle: 'Key Features',
+                feat1: 'Professional video player',
+                feat2: 'Full English support',
+                feat3: 'Stremio addon management',
+                feat4: 'Watch history & favorites',
+                feat5: 'Multi-language subtitles',
+                feat6: 'Secure local storage',
+                feat7: 'Modern & smooth design',
+                createdBy: 'Created by: ',
+                copyright: 'All rights reserved © 2024'
+            }
+        };
+
+        function setLanguage(lang) {
+            const t = translations[lang];
+            
+            // Update HTML attributes
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            
+            // Update buttons
+            document.getElementById('arBtn').classList.toggle('active', lang === 'ar');
+            document.getElementById('enBtn').classList.toggle('active', lang === 'en');
+            
+            // Update text
+            document.getElementById('title').textContent = t.title;
+            document.getElementById('subtitle').textContent = t.subtitle;
+            document.getElementById('downloadBtn').textContent = t.downloadBtn;
+            document.getElementById('versionLabel').textContent = t.versionLabel;
+            document.getElementById('sizeLabel').textContent = t.sizeLabel;
+            document.getElementById('requiresLabel').textContent = t.requiresLabel;
+            document.getElementById('featuresTitle').textContent = t.featuresTitle;
+            
+            // Update features
+            for (let i = 1; i <= 7; i++) {
+                document.getElementById(`feat${i}`).textContent = t[`feat${i}`];
+            }
+            
+            document.getElementById('createdBy').innerHTML = t.createdBy + '<span class="developer">Eyad AI Juhani</span>';
+            document.getElementById('copyright').textContent = t.copyright;
+            
+            // Update direction
+            const infoBox = document.getElementById('infoBox');
+            const featuresBox = document.getElementById('featuresBox');
+            
+            if (lang === 'ar') {
+                infoBox.classList.add('rtl');
+                featuresBox.classList.add('rtl');
+            } else {
+                infoBox.classList.remove('rtl');
+                featuresBox.classList.remove('rtl');
+            }
+        }
+
         function downloadAPK() {
             const downloadURL = 'https://github.com/mnbvjjhg65-ux/EyadFlix/releases/download/v1.0.0/EyadFlix-v1.0.0.apk';
             
-            // تحميل تلقائي مباشر
+            // Direct automatic download
             const link = document.createElement('a');
             link.href = downloadURL;
             link.download = 'EyadFlix-v1.0.0.apk';
@@ -191,6 +322,9 @@
             link.click();
             document.body.removeChild(link);
         }
+
+        // Initialize with Arabic
+        setLanguage('ar');
     </script>
 </body>
 </html>
