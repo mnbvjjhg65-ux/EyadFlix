@@ -1,0 +1,48 @@
+{
+  "name": "EyadFlix",
+  "version": 2,
+  "buildCommand": "echo 'Static files ready'",
+  "outputDirectory": ".",
+  "public": true,
+  "env": {},
+  "routes": [
+    {
+      "src": "/download\\.html",
+      "dest": "/download.html",
+      "headers": {
+        "Cache-Control": "public, max-age=3600"
+      }
+    },
+    {
+      "src": "/download-en\\.html",
+      "dest": "/download-en.html",
+      "headers": {
+        "Cache-Control": "public, max-age=3600"
+      }
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/download.html",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/html; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/download-en.html",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/html; charset=utf-8"
+        }
+      ]
+    }
+  ]
+}

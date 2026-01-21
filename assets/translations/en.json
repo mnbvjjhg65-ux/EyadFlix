@@ -1,0 +1,115 @@
+{
+  "appName": "EyadFlix",
+  "home": "Home",
+  "addons": "Addons",
+  "library": "Library",
+  "settings": "Settings",
+  "search": "Search",
+  "loading": "Loading...",
+  "error": "An error occurred",
+  "retry": "Retry",
+  "ok": "OK",
+  "cancel": "Cancel",
+  "delete": "Delete",
+  "edit": "Edit",
+  "add": "Add",
+  "save": "Save",
+  "back": "Back",
+  
+  "homeScreen": {
+    "title": "Home",
+    "discoverNew": "Discover New",
+    "nowPlayng": "Now Playing",
+    "continueWatching": "Continue Watching",
+    "trending": "Trending",
+    "topRated": "Top Rated",
+    "noAddons": "No addons installed. Go to Addons to add one.",
+    "noResults": "No results found"
+  },
+  
+  "addonsScreen": {
+    "title": "Manage Addons",
+    "addNew": "Add New Addon",
+    "installedAddons": "Installed Addons",
+    "noAddons": "No addons installed",
+    "enterManifestUrl": "Enter manifest URL",
+    "pasteUrl": "Paste addon manifest URL (e.g., https://example.com/manifest.json)",
+    "install": "Install",
+    "installing": "Installing...",
+    "installed": "Installed",
+    "enable": "Enable",
+    "disable": "Disable",
+    "removeAddon": "Remove Addon",
+    "confirmDelete": "Are you sure you want to remove this addon?",
+    "invalidUrl": "Please enter a valid URL",
+    "addonAlreadyInstalled": "This addon is already installed",
+    "successfullyInstalled": "Addon installed successfully",
+    "successfullyRemoved": "Addon removed successfully",
+    "failedToFetch": "Failed to fetch addon. Please check the URL and try again"
+  },
+  
+  "libraryScreen": {
+    "title": "Library",
+    "favorites": "Favorites",
+    "watchHistory": "Watch History",
+    "noFavorites": "You haven't added any favorites yet",
+    "noHistory": "Your watch history is empty",
+    "clearHistory": "Clear History",
+    "confirmClearHistory": "Are you sure you want to clear your watch history?"
+  },
+  
+  "settingsScreen": {
+    "title": "Settings",
+    "language": "Language",
+    "theme": "Theme",
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode",
+    "system": "System",
+    "autoPlay": "Auto Play",
+    "about": "About",
+    "version": "Version",
+    "developer": "Developer",
+    "description": "A modern media streaming app powered by Stremio addons"
+  },
+  
+  "mediaDetail": {
+    "synopsis": "Synopsis",
+    "cast": "Cast",
+    "director": "Director",
+    "writer": "Writer",
+    "rating": "Rating",
+    "genre": "Genre",
+    "episodes": "Episodes",
+    "streams": "Available Streams",
+    "addToFavorites": "Add to Favorites",
+    "removeFromFavorites": "Remove from Favorites",
+    "play": "Play",
+    "selectQuality": "Select Quality",
+    "selectStream": "Select Stream"
+  },
+  
+  "player": {
+    "title": "Video Player",
+    "selectSubtitle": "Select Subtitle",
+    "noSubtitles": "No subtitles available",
+    "subtitleSettings": "Subtitle Settings",
+    "fontSize": "Font Size",
+    "subtitleDelay": "Subtitle Delay",
+    "skipIntro": "Skip Intro",
+    "nextEpisode": "Next Episode",
+    "playbackSpeed": "Playback Speed",
+    "settings": "Settings",
+    "errors": {
+      "loadingFailed": "Failed to load video",
+      "streamUnavailable": "Stream is currently unavailable",
+      "timeout": "Connection timeout"
+    }
+  },
+  
+  "validation": {
+    "emptyField": "This field cannot be empty",
+    "invalidUrl": "Please enter a valid URL",
+    "networkError": "Network error. Please check your connection",
+    "timeoutError": "Request timed out. Please try again"
+  }
+}

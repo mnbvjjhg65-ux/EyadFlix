@@ -1,0 +1,115 @@
+{
+  "appName": "إياد فليكس",
+  "home": "الرئيسية",
+  "addons": "الإضافات",
+  "library": "المكتبة",
+  "settings": "الإعدادات",
+  "search": "بحث",
+  "loading": "جاري التحميل...",
+  "error": "حدث خطأ",
+  "retry": "إعادة محاولة",
+  "ok": "حسناً",
+  "cancel": "إلغاء",
+  "delete": "حذف",
+  "edit": "تعديل",
+  "add": "إضافة",
+  "save": "حفظ",
+  "back": "رجوع",
+  
+  "homeScreen": {
+    "title": "الرئيسية",
+    "discoverNew": "اكتشف محتوى جديد",
+    "nowPlayng": "يعرض الآن",
+    "continueWatching": "تابع مشاهدتك",
+    "trending": "الرائجة",
+    "topRated": "الأفضل تقييماً",
+    "noAddons": "لا توجد إضافات مثبتة. اذهب إلى الإضافات لإضافة واحدة.",
+    "noResults": "لم يتم العثور على نتائج"
+  },
+  
+  "addonsScreen": {
+    "title": "إدارة الإضافات",
+    "addNew": "إضافة إضافة جديدة",
+    "installedAddons": "الإضافات المثبتة",
+    "noAddons": "لا توجد إضافات مثبتة",
+    "enterManifestUrl": "أدخل رابط البيان",
+    "pasteUrl": "الصق رابط البيان (مثلاً: https://example.com/manifest.json)",
+    "install": "تثبيت",
+    "installing": "جاري التثبيت...",
+    "installed": "مثبت",
+    "enable": "تفعيل",
+    "disable": "تعطيل",
+    "removeAddon": "إزالة الإضافة",
+    "confirmDelete": "هل أنت متأكد من رغبتك في إزالة هذه الإضافة؟",
+    "invalidUrl": "يرجى إدخال رابط صحيح",
+    "addonAlreadyInstalled": "هذه الإضافة مثبتة بالفعل",
+    "successfullyInstalled": "تم تثبيت الإضافة بنجاح",
+    "successfullyRemoved": "تم إزالة الإضافة بنجاح",
+    "failedToFetch": "فشل في جلب الإضافة. يرجى التحقق من الرابط والمحاولة مرة أخرى"
+  },
+  
+  "libraryScreen": {
+    "title": "المكتبة",
+    "favorites": "المفضلة",
+    "watchHistory": "سجل المشاهدة",
+    "noFavorites": "لم تضف أي عناصر للمفضلة بعد",
+    "noHistory": "سجل المشاهدة الخاص بك فارغ",
+    "clearHistory": "مسح السجل",
+    "confirmClearHistory": "هل أنت متأكد من رغبتك في مسح سجل المشاهدة؟"
+  },
+  
+  "settingsScreen": {
+    "title": "الإعدادات",
+    "language": "اللغة",
+    "theme": "المظهر",
+    "darkMode": "الوضع الداكن",
+    "lightMode": "الوضع الفاتح",
+    "system": "النظام",
+    "autoPlay": "التشغيل التلقائي",
+    "about": "حول",
+    "version": "الإصدار",
+    "developer": "المطور",
+    "description": "تطبيق بث وسائط حديث يعتمد على إضافات Stremio"
+  },
+  
+  "mediaDetail": {
+    "synopsis": "الملخص",
+    "cast": "الممثلون",
+    "director": "المخرج",
+    "writer": "الكاتب",
+    "rating": "التقييم",
+    "genre": "النوع",
+    "episodes": "الحلقات",
+    "streams": "الخيارات المتاحة",
+    "addToFavorites": "إضافة للمفضلة",
+    "removeFromFavorites": "إزالة من المفضلة",
+    "play": "تشغيل",
+    "selectQuality": "اختر الجودة",
+    "selectStream": "اختر المصدر"
+  },
+  
+  "player": {
+    "title": "مشغل الفيديو",
+    "selectSubtitle": "اختر الترجمة",
+    "noSubtitles": "لا توجد ترجمات متاحة",
+    "subtitleSettings": "إعدادات الترجمة",
+    "fontSize": "حجم الخط",
+    "subtitleDelay": "تأخير الترجمة",
+    "skipIntro": "تخطي المقدمة",
+    "nextEpisode": "الحلقة التالية",
+    "playbackSpeed": "سرعة التشغيل",
+    "settings": "الإعدادات",
+    "errors": {
+      "loadingFailed": "فشل تحميل الفيديو",
+      "streamUnavailable": "المصدر غير متاح حالياً",
+      "timeout": "انتهت صلاحية الاتصال"
+    }
+  },
+  
+  "validation": {
+    "emptyField": "لا يمكن ترك هذا الحقل فارغاً",
+    "invalidUrl": "يرجى إدخال رابط صحيح",
+    "networkError": "خطأ في الشبكة. يرجى التحقق من اتصالك",
+    "timeoutError": "انتهت صلاحية الطلب. يرجى المحاولة مرة أخرى"
+  }
+}

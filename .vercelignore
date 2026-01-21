@@ -1,0 +1,9 @@
+# Vercel ignore file
+node_modules/
+.git/
+*.log
+build/
+.dart_tool/
+.flutter-plugins
+.packages
+pubspec.lock
